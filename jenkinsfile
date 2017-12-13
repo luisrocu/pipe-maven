@@ -9,7 +9,7 @@ pipeline {
        steps {
           echo 'Building..'
         echo "PATH=${PATH}"
-        ECHO "M2_HOME=${M2_HOME}"
+        echo "M2_HOME=${M2_HOME}"
         sh 'mvn clean install'
        }
      }
@@ -20,8 +20,8 @@ pipeline {
      }
      stage('Deploy') {
        steps {
-          echo 'Dploying..'
+          echo 'Deploying..'
        }
      }
-  }
+   }
 }
